@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Advanced AI-powered deep fake detection system. Upload images or videos to detect manipulated media with high accuracy.">
+    <title>DeepFaux | Deep Fake Detection System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <div id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <span class="logo-text">Deep<span class="logo-ai">Faux</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#detect" class="nav-link">Detect</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <button class="nav-btn">Get Started</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">See What's</span>
+                <span class="title-line gradient-text">Real</span>
+            </h1>
+            <p class="hero-subtitle">
+                A simple tool to check if an image has been generated or manipulated by AI.
+            </p>
+            <div class="hero-cta">
+                <a href="#detect" class="btn btn-primary">
+                    <span>Check a File</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="#features" class="btn btn-secondary">See How It Works</a>
+            </div>
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <div class="feature-pill-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="feature-pill-text">
+                        <span class="pill-title">Private</span>
+                        <span class="pill-desc">Files stay local</span>
+                    </div>
+                </div>
+                <div class="hero-feature">
+                    <div class="feature-pill-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="feature-pill-text">
+                        <span class="pill-title">Fast</span>
+                        <span class="pill-desc">Results in seconds</span>
+                    </div>
+                </div>
+                <div class="hero-feature">
+                    <div class="feature-pill-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="feature-pill-text">
+                        <span class="pill-title">Accurate</span>
+                        <span class="pill-desc">AI-powered detection</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="visual-container">
+                <!-- Animated background orbs -->
+                <div class="bg-orb orb-1"></div>
+                <div class="bg-orb orb-2"></div>
+                <div class="bg-orb orb-3"></div>
+
+                <!-- Main scanning rings -->
+                <div class="scan-ring ring-1"></div>
+                <div class="scan-ring ring-2"></div>
+                <div class="scan-ring ring-3"></div>
+
+                <!-- Center graphic -->
+                <div class="visual-core">
+                    <div class="pulse-ring"></div>
+                    <div class="core-inner">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <!-- Face scan icon -->
+                            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2"
+                                stroke-dasharray="8 4" />
+                            <circle cx="32" cy="28" r="10" stroke="currentColor" stroke-width="2" />
+                            <path d="M20 48c0-8 5.4-14 12-14s12 6 12 14" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                            <!-- Scan lines -->
+                            <line x1="32" y1="4" x2="32" y2="12" stroke="currentColor" stroke-width="2"
+                                class="scan-line" />
+                            <line x1="32" y1="52" x2="32" y2="60" stroke="currentColor" stroke-width="2"
+                                class="scan-line" />
+                            <line x1="4" y1="32" x2="12" y2="32" stroke="currentColor" stroke-width="2"
+                                class="scan-line" />
+                            <line x1="52" y1="32" x2="60" y2="32" stroke="currentColor" stroke-width="2"
+                                class="scan-line" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Floating status cards -->
+                <div class="floating-card card-1">
+                    <div class="card-icon authentic">
+                        <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+                            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <span>Authentic</span>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon warning">
+                        <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+                            <path d="M12 9v4M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <span>AI Detected</span>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon analyzing">
+                        <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"
+                                stroke-dasharray="4 2" />
+                        </svg>
+                    </div>
+                    <span>Analyzing...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detection Section -->
+    <section id="detect" class="detection-section">
+        <div class="section-header">
+            <h2 class="section-title">Try It Out</h2>
+            <p class="section-subtitle">Drop an image below — we'll analyze it in seconds</p>
+        </div>
+
+        <div class="detection-container">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-content">
+                    <div class="upload-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17 8L12 3L7 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 3V15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="upload-title">Drag & Drop your image here</h3>
+                    <p class="upload-text">or click to browse</p>
+                    <div class="upload-formats">
+                        <span class="format-tag">JPG</span>
+                        <span class="format-tag">PNG</span>
+                        <span class="format-tag">WEBP</span>
+                    </div>
+                </div>
+                <input type="file" id="fileInput" accept="image/*" hidden>
+            </div>
+
+            <!-- Preview Area -->
+            <div class="preview-area" id="previewArea">
+                <div class="preview-content">
+                    <img id="previewImage" src="" alt="Preview">
+                    <video id="previewVideo" controls></video>
+                    <button class="remove-btn" id="removeFile">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Analyze Button -->
+            <button class="analyze-btn" id="analyzeBtn">
+                <span class="btn-text">Analyze Media</span>
+                <div class="btn-loader">
+                    <span></span><span></span><span></span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-container" id="resultsContainer">
+            <div class="result-card main-result">
+                <div class="result-indicator" id="resultIndicator">
+                    <svg class="indicator-ring" viewBox="0 0 100 100">
+                        <circle class="ring-bg" cx="50" cy="50" r="45" />
+                        <circle class="ring-progress" cx="50" cy="50" r="45" id="progressRing" />
+                    </svg>
+                    <div class="indicator-content">
+                        <span class="indicator-value" id="resultValue">0</span>
+                        <span class="indicator-label">%</span>
+                    </div>
+                </div>
+                <div class="result-info">
+                    <h3 class="result-title" id="resultTitle">Analysis Complete</h3>
+                    <p class="result-verdict" id="resultVerdict">Authentic Media</p>
+                    <p class="result-summary" id="resultSummary"
+                        style="margin-top: 1rem; color: #94a3b8; font-size: 0.9rem; line-height: 1.5;"></p>
+                    <div class="result-reasoning" id="resultReasoning"
+                        style="margin-top: 1rem; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 8px; display: none;">
+                        <h4 style="color: #e2e8f0; font-size: 0.9rem; margin-bottom: 0.5rem;">Reasoning</h4>
+                        <p id="reasoningText" style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5;"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-details">
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <span class="detail-icon">📡</span>
+                        <span class="detail-title">Frequency Analysis</span>
+                    </div>
+                    <div class="detail-bar">
+                        <div class="bar-fill" id="fftBar" data-value="0"></div>
+                    </div>
+                    <span class="detail-value" id="fftValue">Analyzing...</span>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <span class="detail-icon">🎨</span>
+                        <span class="detail-title">Color Consistency</span>
+                    </div>
+                    <div class="detail-bar">
+                        <div class="bar-fill" id="colorBar" data-value="0"></div>
+                    </div>
+                    <span class="detail-value" id="colorValue">Analyzing...</span>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <span class="detail-icon">📊</span>
+                        <span class="detail-title">Noise Patterns</span>
+                    </div>
+                    <div class="detail-bar">
+                        <div class="bar-fill" id="noiseBar" data-value="0"></div>
+                    </div>
+                    <span class="detail-value" id="noiseValue">Analyzing...</span>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <span class="detail-icon">💾</span>
+                        <span class="detail-title">Compression Quality</span>
+                    </div>
+                    <div class="detail-bar">
+                        <div class="bar-fill" id="compressionBar" data-value="0"></div>
+                    </div>
+                    <span class="detail-value" id="compressionValue">Analyzing...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Simple analysis, clear results</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M21 16V8C20.9996 7.6493 20.9071 7.30481 20.7315 7.00119C20.556 6.69757 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69757 3.26846 7.00119C3.09294 7.30481 3.00036 7.6493 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3024 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.998 12 21.998C12.3511 21.998 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3024 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z"
+                            stroke="currentColor" stroke-width="2" />
+                        <path d="M12 22V12" stroke="currentColor" stroke-width="2" />
+                        <path d="M12 12L21.5 7" stroke="currentColor" stroke-width="2" />
+                        <path d="M12 12L2.5 7" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Deep Analysis</h3>
+                <p class="feature-desc">Examines patterns that indicate AI generation</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Quick Results</h3>
+                <p class="feature-desc">Get your analysis in seconds</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            stroke="currentColor" stroke-width="2" />
+                        <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Reliable Detection</h3>
+                <p class="feature-desc">Identifies subtle signs of manipulation</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 22S20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Private by Design</h3>
+                <p class="feature-desc">Your images stay on your device</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2 class="section-title">Why This Matters</h2>
+                <p>With the rise of AI-generated images, it's becoming harder to distinguish real content from fake.
+                    This poses challenges for researchers, journalists, and students alike.</p>
+                <p>DeepFaux was developed as a research tool to help identify manipulated images using deep learning
+                    techniques studied in academic settings.</p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <span class="about-icon">🔍</span>
+                        <span>Looks for unnatural facial movements</span>
+                    </div>
+                    <div class="about-feature">
+                        <span class="about-icon">🖼️</span>
+                        <span>Checks for image compression artifacts</span>
+                    </div>
+                    <div class="about-feature">
+                        <span class="about-icon">📊</span>
+                        <span>Analyzes lighting and shadow consistency</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="analysis-flow">
+                    <!-- Step 1: Upload -->
+                    <div class="flow-step step-1">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <span class="step-label">Upload</span>
+                    </div>
+
+                    <!-- Connector -->
+                    <div class="flow-connector">
+                        <div class="connector-line"></div>
+                        <div class="connector-dot"></div>
+                    </div>
+
+                    <!-- Step 2: Analyze -->
+                    <div class="flow-step step-2">
+                        <div class="step-icon analyzing-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"
+                                    stroke-dasharray="4 2" />
+                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <span class="step-label">Analyze</span>
+                    </div>
+
+                    <!-- Connector -->
+                    <div class="flow-connector">
+                        <div class="connector-line"></div>
+                        <div class="connector-dot"></div>
+                    </div>
+
+                    <!-- Step 3: Results -->
+                    <div class="flow-step step-3">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <span class="step-label">Results</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" />
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" />
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <span class="logo-text">Deep<span class="logo-ai">Faux</span></span>
+                </a>
+                <p class="footer-tagline">Know what's real</p>
+            </div>
+            <p class="footer-copy">&copy; 2026 DeepFaux. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/app.js"></script>
+</body>
+
+</html>
